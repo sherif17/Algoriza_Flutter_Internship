@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_register_app/UI/login/login.dart';
 import 'package:login_register_app/UI/onBoarding/onBoarding.dart';
 
 void main() {
@@ -17,6 +18,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/login': (context) => const Login(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        //'/second': (context) => const SecondScreen(),
+      },
       home: const OnBoarding(),
     );
   }

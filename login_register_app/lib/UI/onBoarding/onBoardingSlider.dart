@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:login_register_app/UI/onBoarding/OnBoardingModel.dart';
 
 class OnBoardingSlider extends StatefulWidget {
   const OnBoardingSlider({Key? key}) : super(key: key);
@@ -36,7 +37,7 @@ class _OnBoardingSliderState extends State<OnBoardingSlider> {
               controller: controller,
               onPageChanged: _updatePosition,
               children: [
-                OnboardingScreen([
+                OnBoardingModel([
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
@@ -63,7 +64,7 @@ class _OnBoardingSliderState extends State<OnBoardingSlider> {
                   ),
                   // Padding(padding: EdgeInsets.all(12.0)),
                 ], "assets/images/sammy-delivery-1.png"),
-                OnboardingScreen(
+                OnBoardingModel(
                   [
                     Padding(
                       padding: const EdgeInsets.all(19),
@@ -95,7 +96,7 @@ class _OnBoardingSliderState extends State<OnBoardingSlider> {
                   ],
                   "assets/images/sammy-delivery-by-drone.png",
                 ),
-                OnboardingScreen(
+                OnBoardingModel(
                   [
                     Padding(
                       padding: const EdgeInsets.all(19),
@@ -159,44 +160,6 @@ class _OnBoardingSliderState extends State<OnBoardingSlider> {
                 ))
           ],
         ),
-      ),
-    );
-  }
-}
-
-class OnboardingScreen extends StatelessWidget {
-  final List<Widget> text;
-  final String imagePath;
-
-  const OnboardingScreen(this.text, this.imagePath, {Key? key})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      // color: Colors.tealAccent.shade100,
-      child: Column(
-        children: [
-          Expanded(
-            flex: 2,
-            child: SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.all(0),
-                child: Image.asset(imagePath),
-              ),
-            ),
-          ),
-          Expanded(
-              flex: 1,
-              child: Padding(
-                padding: const EdgeInsets.all(1),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: text),
-              )),
-        ],
       ),
     );
   }

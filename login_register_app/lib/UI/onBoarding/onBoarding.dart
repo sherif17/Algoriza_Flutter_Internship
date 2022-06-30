@@ -25,7 +25,9 @@ class _OnBoardingState extends State<OnBoarding> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
                   child: Container(
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
@@ -82,7 +84,9 @@ class _OnBoardingState extends State<OnBoarding> {
                   'Get Started',
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
               ),
             ),
           ),
