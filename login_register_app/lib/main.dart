@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login_register_app/UI/login/login.dart';
 import 'package:login_register_app/UI/onBoarding/onBoarding.dart';
+import 'package:login_register_app/UI/registration/registeration.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/login': (context) => const Login(),
+        '/registration': (context) => const Registration(),
         // When navigating to the "/second" route, build the SecondScreen widget.
         //'/second': (context) => const SecondScreen(),
       },

@@ -158,22 +158,27 @@ class Login extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(top: size.height * 0.05),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        Text("Doesn't has any account?",
-                            style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.grey)),
-                        Text(" Register here",
-                            style: TextStyle(
-                                fontSize: 17,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.blueAccent)),
-                      ]),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/registration');
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.only(top: size.height * 0.05),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          Text("Doesn't has any account?",
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.grey)),
+                          Text(" Register here",
+                              style: TextStyle(
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.w500,
+                                  color: Colors.blueAccent)),
+                        ]),
+                  ),
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(

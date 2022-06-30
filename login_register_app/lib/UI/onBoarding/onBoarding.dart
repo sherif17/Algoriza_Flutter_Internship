@@ -91,20 +91,25 @@ class _OnBoardingState extends State<OnBoarding> {
             ),
           ),
           SizedBox(height: size.height * 0.025),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Text("Don't have an account?",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w400,
-                  )),
-              Text(" Sign Up",
-                  style: TextStyle(
+          InkWell(
+            onTap: () {
+              Navigator.pushNamed(context, '/registration');
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text("Don't have an account?",
+                    style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
-                      color: Colors.teal.withOpacity(0.6)))
-            ],
+                    )),
+                Text(" Sign Up",
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.teal.withOpacity(0.6)))
+              ],
+            ),
           )
         ],
       ),
