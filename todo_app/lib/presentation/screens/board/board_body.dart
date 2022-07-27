@@ -50,19 +50,4 @@ class _BoardBodyState extends State<BoardBody> {
       print('database opened');
     });
   }
-
-  void insertToDatabase() {
-    database.transaction((txn) async {
-      txn
-          .rawInsert(
-              'INSERT INTO todo(title, deadline, startTime, endTime, remind, favorite, color, status) VALUES("Todo_1", "2021-02-23", "11:00 AM", "14:00AM", ${10}, ${false}, "#FFFFFF", "Completed")')
-          .then((value) => print("${value}inserted successfully"))
-          .catchError((error) {
-            print('Error when Inserting into Table${error.toString()}');
-            return null;
-          })
-          .then((value) => null)
-          .onError((error, stackTrace) => null);
-    });
-  }
 }

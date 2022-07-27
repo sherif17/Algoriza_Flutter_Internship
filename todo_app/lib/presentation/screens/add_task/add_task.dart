@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/presentation/screens/add_task/add_task_body.dart';
 
 class AddTask extends StatefulWidget {
   const AddTask({Key? key}) : super(key: key);
@@ -47,6 +48,7 @@ class _AddTaskState extends State<AddTask> {
             color: Colors.grey.withOpacity(0.2),
             thickness: 3,
           ),
+          const AddTaskBody(),
         ],
       ),
     );

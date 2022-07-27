@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/core/widgets/app_button.dart';
 import 'package:todo_app/presentation/screens/Board/board_body.dart';
 import 'package:todo_app/presentation/screens/add_task/add_task.dart';
 import 'package:todo_app/presentation/screens/schedule/schedule.dart';
@@ -73,37 +74,8 @@ class Board extends StatelessWidget {
             ),
           ),
           body: BoardBody(),
-          floatingActionButton: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Align(
-              alignment: Alignment.bottomRight,
-              child: Container(
-                width: size.width * 0.9,
-                height: size.height * 0.07,
-                child: TextButton(
-                  onPressed: () {
-                    showModalBottomSheet(
-                      context: context,
-                      builder: (context) => const AddTask(),
-                      isScrollControlled: true,
-                    );
-                  },
-                  child: const Text("Add Task"),
-                  style: TextButton.styleFrom(
-                      primary: Colors.white,
-                      backgroundColor: Colors.green.shade500,
-                      textStyle:
-                          const TextStyle(fontSize: 20, color: Colors.white)),
-                ),
-              ),
-            ),
-          )
-          // FloatingActionButton(
-          //
-          //   onPressed: () {},
-          //
-          // ),
-          ),
+          floatingActionButton:
+              AppButton(widget: const AddTask(), text: 'Add Task')),
     );
   }
 }
